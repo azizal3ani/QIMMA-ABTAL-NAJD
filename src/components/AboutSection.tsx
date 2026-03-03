@@ -1,7 +1,5 @@
 import { motion } from 'framer-motion'
 import { Building2, Users, Award } from 'lucide-react'
-import teamHero from '@/assets/team-hero.png'
-
 const stats = [
   { number: '+500', label: 'مشروع منجز', icon: Building2 },
   { number: '+200', label: 'عميل راضٍ', icon: Users },
@@ -24,13 +22,12 @@ export default function AboutSection() {
           </h3>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="space-y-6"
-          >
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="space-y-6"
+        >
             <p className="text-muted-foreground text-lg leading-relaxed">
               شركة سعودية رائدة في مجالات المقاولات والأعمال الهندسية والخدمات العامة. تتميز الشركة بتقديم مجموعة واسعة من الخدمات التخصصية التي تواكب أحدث التطورات وتلبي المتطلبات المتغيرة لمختلف القطاعات.
             </p>
@@ -46,21 +43,7 @@ export default function AboutSection() {
                 </div>
               ))}
             </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="flex justify-center"
-          >
-            <img
-              src={teamHero}
-              alt="فريق قمة أبطال نجد"
-              className="w-full max-w-lg h-auto object-contain"
-            />
-          </motion.div>
-        </div>
+        </motion.div>
       </div>
     </section>
   )

@@ -1,11 +1,14 @@
 import { motion } from 'framer-motion'
-import { Phone, Menu, X } from 'lucide-react'
+import { Phone, Menu, X, Sun, Moon, Globe } from 'lucide-react'
 import { useState, useEffect } from 'react'
-import heroImg from '@/assets/hero-construction.jpg'
+import { useTheme } from '@/contexts/ThemeContext'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const { theme, toggleTheme } = useTheme()
+  const { lang, toggleLang, t } = useLanguage()
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50)
@@ -19,13 +22,13 @@ export default function Navbar() {
   }, [isMobileMenuOpen])
 
   const links = [
-    { href: '#about', label: 'من نحن' },
-    { href: '#vision', label: 'رؤيتنا' },
-    { href: '#values', label: 'قيمنا' },
-    { href: '#services', label: 'خدماتنا' },
-    { href: '#projects', label: 'مشاريعنا' },
-    { href: '#why-us', label: 'لماذا نحن' },
-    { href: '#contact', label: 'تواصل معنا' },
+    { href: '#about', label: t('nav.about') },
+    { href: '#vision', label: t('nav.vision') },
+    { href: '#values', label: t('nav.values') },
+    { href: '#services', label: t('nav.services') },
+    { href: '#projects', label: t('nav.projects') },
+    { href: '#why-us', label: t('nav.whyUs') },
+    { href: '#contact', label: t('nav.contact') },
   ]
 
   return (
@@ -39,7 +42,7 @@ export default function Navbar() {
         isScrolled ? 'bg-background/90 backdrop-blur-xl border-b border-border' : 'bg-transparent'
       }`}>
         <div className="flex items-center justify-between max-w-7xl mx-auto">
-          <a href="#" className="text-primary font-extrabold text-xl">قمة أبطال نجد</a>
+          <a href="#" className="text-primary font-extrabold text-xl">{t('nav.brand')}</a>
           
           <div className="hidden lg:flex items-center gap-6">
             {links.map(l => (
@@ -49,10 +52,29 @@ export default function Navbar() {
             ))}
           </div>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2">
+            {/* Theme Toggle */}
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-lg hover:bg-muted transition-colors text-foreground/80 hover:text-primary"
+              aria-label="Toggle theme"
+            >
+              {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+            </button>
+
+            {/* Language Toggle */}
+            <button
+              onClick={toggleLang}
+              className="flex items-center gap-1 px-3 py-2 rounded-lg hover:bg-muted transition-colors text-foreground/80 hover:text-primary text-sm font-bold"
+              aria-label="Toggle language"
+            >
+              <Globe className="w-4 h-4" />
+              {lang === 'ar' ? 'EN' : 'ع'}
+            </button>
+
             <a href="tel:+966548511531" className="hidden sm:flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2 rounded-lg font-bold text-sm hover:opacity-90 transition-opacity">
               <Phone className="w-4 h-4" />
-              اتصل بنا
+              {t('nav.callUs')}
             </a>
             <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="lg:hidden text-foreground p-2">
               {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -77,7 +99,7 @@ export default function Navbar() {
             ))}
             <a href="tel:+966548511531" className="mt-4 flex items-center justify-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-bold">
               <Phone className="w-5 h-5" />
-              اتصل بنا
+              {t('nav.callUs')}
             </a>
           </div>
         </motion.div>

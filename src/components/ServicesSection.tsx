@@ -1,13 +1,10 @@
 import { motion } from 'framer-motion'
-
-const services = [
-  'إسفلت', 'حفر', 'توريد مواد', 'تأجير معدات',
-  'ترحيل مواد', 'نقل معدات', 'تسوية تربة', 'ردم',
-  'شفط مياه', 'توصيل مواسير', 'أعمال إسناد', 'بناء',
-  'هدم', 'بناء مستودعات', 'مرفق مجي', 'انترلوك',
-]
+import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function ServicesSection() {
+  const { t } = useLanguage()
+  const serviceKeys = Array.from({ length: 16 }, (_, i) => `services.s${i + 1}`)
+
   return (
     <section id="services" className="section-padding bg-background">
       <div className="max-w-7xl mx-auto">
@@ -17,15 +14,13 @@ export default function ServicesSection() {
           viewport={{ once: true }}
           className="text-center mb-6"
         >
-          <h2 className="text-sm font-bold text-primary mb-2">ماذا نقدم</h2>
-          <h3 className="text-3xl md:text-5xl font-black text-primary mb-4">من خدماتنا</h3>
-          <p className="text-muted-foreground max-w-3xl mx-auto text-lg">
-            بشغف بلا حدود، نسعى جاهدين لتقديم باقات من الخدمات التخصصية الشاملة والمتكاملة التي تشمل خيارات متعددة تناسب كافة الاحتياجات.
-          </p>
+          <h2 className="text-sm font-bold text-primary mb-2">{t('services.label')}</h2>
+          <h3 className="text-3xl md:text-5xl font-black text-primary mb-4">{t('services.title')}</h3>
+          <p className="text-muted-foreground max-w-3xl mx-auto text-lg">{t('services.desc')}</p>
         </motion.div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mt-12">
-          {services.map((service, i) => (
+          {serviceKeys.map((key, i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, scale: 0.9 }}
@@ -34,7 +29,7 @@ export default function ServicesSection() {
               transition={{ delay: i * 0.05 }}
               className="border border-primary/40 rounded-xl px-4 py-4 text-center card-hover hover:border-primary hover:bg-primary/5 cursor-default"
             >
-              <span className="text-foreground font-bold">{service}</span>
+              <span className="text-foreground font-bold">{t(key)}</span>
             </motion.div>
           ))}
         </div>

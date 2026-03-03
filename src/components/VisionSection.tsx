@@ -1,25 +1,15 @@
 import { motion } from 'framer-motion'
 import { Eye, Target, Handshake } from 'lucide-react'
-
-const items = [
-  {
-    icon: Eye,
-    title: 'رؤيتنا',
-    text: 'كسب ثقة عملائنا الكرام وتوسيع قاعدة المستفيدين من خدماتنا المتميزة. نسعى إلى تزويد عملائنا بتجربة استثنائية وقيمة مضافة وميزة تنافسية، مع التركيز الكامل على تحقيق رضاهم التام.',
-  },
-  {
-    icon: Target,
-    title: 'مهمتنا',
-    text: 'نفخر بمجموعتنا التي أسست خبرات متراكمة ومعرفة عملية واسعة. لقد حشدنا جميع طاقاتنا لنكون في طليعة المجموعات التي تسعى للنهضة في شتى المجالات على مستوى المملكة، بما يتماشى مع رؤية المملكة 2030.',
-  },
-  {
-    icon: Handshake,
-    title: 'التزامنا',
-    text: 'نلتزم بتقديم خدماتنا بمستوى مرموق ووفقاً لأعلى معايير الجودة العالمية وأفضل الممارسات، باستخدام أحدث التقنيات والمعدات، وتوظيف أمثل للخبرات الطويلة لكوادرنا.',
-  },
-]
+import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function VisionSection() {
+  const { t } = useLanguage()
+  const items = [
+    { icon: Eye, title: t('vision.t1'), text: t('vision.d1') },
+    { icon: Target, title: t('vision.t2'), text: t('vision.d2') },
+    { icon: Handshake, title: t('vision.t3'), text: t('vision.d3') },
+  ]
+
   return (
     <section id="vision" className="section-padding bg-background">
       <div className="max-w-7xl mx-auto">
@@ -29,8 +19,8 @@ export default function VisionSection() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-sm font-bold text-primary mb-2">ما يميزنا</h2>
-          <h3 className="text-3xl md:text-5xl font-black text-foreground">رؤيتنا ورسالتنا وقيمنا</h3>
+          <h2 className="text-sm font-bold text-primary mb-2">{t('vision.label')}</h2>
+          <h3 className="text-3xl md:text-5xl font-black text-foreground">{t('vision.title')}</h3>
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-6">

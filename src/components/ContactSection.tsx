@@ -1,14 +1,16 @@
 import { motion } from 'framer-motion'
 import { Phone, Mail, MapPin } from 'lucide-react'
-
-const contacts = [
-  { icon: Phone, label: '+966 54 851 1531', href: 'tel:+966548511531' },
-  { icon: Phone, label: '+966 53 118 8553', href: 'tel:+966531188553' },
-  { icon: Mail, label: 'Abtal.najd@gmail.com', href: 'mailto:Abtal.najd@gmail.com' },
-  { icon: MapPin, label: 'المملكة العربية السعودية', href: '#' },
-]
+import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function ContactSection() {
+  const { t } = useLanguage()
+  const contacts = [
+    { icon: Phone, label: '+966 54 851 1531', href: 'tel:+966548511531' },
+    { icon: Phone, label: '+966 53 118 8553', href: 'tel:+966531188553' },
+    { icon: Mail, label: 'Abtal.najd@gmail.com', href: 'mailto:Abtal.najd@gmail.com' },
+    { icon: MapPin, label: t('contact.location'), href: '#' },
+  ]
+
   return (
     <section id="contact" className="section-padding bg-secondary">
       <div className="max-w-7xl mx-auto">
@@ -18,9 +20,9 @@ export default function ContactSection() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-sm font-bold text-primary mb-2">تواصل معنا</h2>
-          <h3 className="text-3xl md:text-5xl font-black text-foreground mb-4">نبني قصص النجاح</h3>
-          <p className="text-muted-foreground text-lg">نحن هنا لخدمتكم. لا تترددوا في التواصل معنا</p>
+          <h2 className="text-sm font-bold text-primary mb-2">{t('contact.label')}</h2>
+          <h3 className="text-3xl md:text-5xl font-black text-foreground mb-4">{t('contact.title')}</h3>
+          <p className="text-muted-foreground text-lg">{t('contact.desc')}</p>
         </motion.div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">

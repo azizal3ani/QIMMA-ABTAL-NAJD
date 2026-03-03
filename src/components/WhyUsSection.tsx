@@ -1,20 +1,11 @@
 import { motion } from 'framer-motion'
 import { CheckCircle } from 'lucide-react'
-
-const reasons = [
-  'الالتزام بتسليم المشاريع في الوقت المحدد',
-  'الاهتمام بأدق التفاصيل والعناية باهتمامات الزبائن',
-  'التحسين المستمر والتطوير الدائم لأساليب العمل',
-  'نعمل بلا كلل لإتقان عملنا على أكمل وجه',
-  'تتميز مشاريعنا بالفخامة والأناقة والتصاميم العصرية',
-  'الجودة العالية والأسعار التنافسية',
-  'إجراءات أمان ممتازة وخصوصية عالية',
-  'نعمل بجد لتوفير متطلبات العملاء والذوق الرفيع',
-  'تقديم خيارات دفع مرنة للعملاء',
-  'استخدام أفضل الخامات وأجود المواد',
-]
+import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function WhyUsSection() {
+  const { t } = useLanguage()
+  const reasons = Array.from({ length: 10 }, (_, i) => t(`whyUs.r${i + 1}`))
+
   return (
     <section id="why-us" className="section-padding bg-background">
       <div className="max-w-7xl mx-auto">
@@ -24,10 +15,8 @@ export default function WhyUsSection() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-sm font-bold text-primary mb-2">تميزنا</h2>
-          <h3 className="text-3xl md:text-5xl font-black text-primary">
-            أسباب تجعلك تختار قمة أبطال نجد
-          </h3>
+          <h2 className="text-sm font-bold text-primary mb-2">{t('whyUs.label')}</h2>
+          <h3 className="text-3xl md:text-5xl font-black text-primary">{t('whyUs.title')}</h3>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-4 max-w-4xl mx-auto">

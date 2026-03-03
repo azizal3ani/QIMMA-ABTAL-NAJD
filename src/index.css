@@ -3,7 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@custom-variant dark (&:is(.dark *));
+@custom-variant light (&:is(.light *));
 
 :root {
   --font-size: 16px;
@@ -30,6 +30,29 @@
   --font-weight-medium: 500;
   --font-weight-normal: 400;
   --radius: 0.75rem;
+}
+
+.light {
+  --background: #f5f5f0;
+  --foreground: #1a1a1a;
+  --card: #ffffff;
+  --card-foreground: #1a1a1a;
+  --popover: #ffffff;
+  --popover-foreground: #1a1a1a;
+  --primary: #d4901a;
+  --primary-foreground: #ffffff;
+  --secondary: #eae6df;
+  --secondary-foreground: #1a1a1a;
+  --muted: #e8e4dd;
+  --muted-foreground: #666666;
+  --accent: #d4901a;
+  --accent-foreground: #ffffff;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: #d4d0c8;
+  --input: #e8e4dd;
+  --input-background: #ffffff;
+  --ring: #d4901a;
 }
 
 @theme inline {

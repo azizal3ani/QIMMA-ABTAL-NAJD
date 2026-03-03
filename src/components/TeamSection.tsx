@@ -32,12 +32,6 @@ export default function TeamSection() {
             alt="فريق عمل شركة قمة أبطال نجد"
             className="w-full h-auto object-contain mx-auto"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
-          <div className="absolute bottom-0 right-0 left-0 p-6 md:p-10 text-center">
-            <p className="text-foreground text-lg md:text-2xl font-bold">
-              كوادر وطنية مؤهلة بأعلى معايير الاحترافية
-            </p>
-          </div>
         </motion.div>
       </div>
     </section>

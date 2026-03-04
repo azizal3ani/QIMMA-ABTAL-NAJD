@@ -45,7 +45,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between max-w-7xl mx-auto">
           <a href="#" className="flex items-center gap-2">
             <img src={logo} alt={t('nav.brand')} className="h-12 w-auto" />
-            <span className="font-extrabold text-sm md:text-base leading-tight hidden sm:block" style={{ color: '#1a56b0' }}>{t('nav.brand')}</span>
+            <span className="text-primary font-extrabold text-sm md:text-base leading-tight hidden sm:block">{t('nav.brand')}</span>
           </a>
           
           <div className="hidden lg:flex items-center gap-6">

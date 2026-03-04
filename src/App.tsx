@@ -1,6 +1,7 @@
 import Navbar from './components/Navbar'
 import HeroSection from './components/HeroSection'
 import AboutSection from './components/AboutSection'
+import CeoSection from './components/CeoSection'
 import VisionSection from './components/VisionSection'
 import ValuesSection from './components/ValuesSection'
 import ServicesSection from './components/ServicesSection'
@@ -18,6 +19,7 @@ export default function App() {
       <main>
         <HeroSection />
         <AboutSection />
+        <CeoSection />
         <VisionSection />
         <ValuesSection />
         <ServicesSection />

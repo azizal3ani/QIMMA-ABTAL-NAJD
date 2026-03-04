@@ -9,6 +9,7 @@ import TeamSection from './components/TeamSection'
 import WhyUsSection from './components/WhyUsSection'
 import ContactSection from './components/ContactSection'
 import FooterSection from './components/FooterSection'
+import ScrollToTop from './components/ScrollToTop'
 
 export default function App() {
   return (
@@ -26,6 +27,7 @@ export default function App() {
         <ContactSection />
       </main>
       <FooterSection />
+      <ScrollToTop />
     </div>
   )
 }

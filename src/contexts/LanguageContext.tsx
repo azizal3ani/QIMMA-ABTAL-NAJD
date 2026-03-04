@@ -134,6 +134,19 @@ const translations: Record<string, Record<Lang, string>> = {
   'contact.desc': { ar: 'نحن هنا لخدمتكم. لا تترددوا في التواصل معنا', en: 'We are here to serve you. Don\'t hesitate to contact us' },
   'contact.location': { ar: 'المملكة العربية السعودية', en: 'Saudi Arabia' },
 
+  // CEO
+  'ceo.label': { ar: 'كلمة المدير العام', en: 'CEO Message' },
+  'ceo.title': { ar: 'كلمة المدير العام', en: 'A Word from the CEO' },
+  'ceo.name': { ar: 'عبدالعزيز الدهامس', en: 'Abdulaziz Al-Dahams' },
+  'ceo.role': { ar: 'المدير العام', en: 'General Manager' },
+  'ceo.bismillah': { ar: 'بسم الله الرحمن الرحيم', en: 'In the Name of God, the Most Gracious, the Most Merciful' },
+  'ceo.p1': { ar: 'نخطو في شركة قمة أبطال نجد للمقاولات بخطى ثابتة نحو صياغة مستقبل جديد لقطاع المقاولات والأعمال الهندسية في مملكتنا الغالية. إننا لا نعتبر أنفسنا مجرد شركة تنفيذ، بل نحن شركاء في التنمية، نضع نصب أعيننا دائماً شعارنا "نبني قصص النجاح".', en: 'At Qimma Abtal Najd Contracting, we are taking steady steps towards shaping a new future for the contracting and engineering sector in our beloved Kingdom. We do not consider ourselves merely an execution company; we are partners in development, always keeping our motto "Building Success Stories" in sight.' },
+  'ceo.p2': { ar: 'منذ انطلاقتنا، عقدنا العزم على أن نكون في طليعة المجموعات التي تسعى للنهضة في شتى المجالات، مستلهمين طموحنا من رؤية المملكة 2030. نحن نؤمن بأن التميز ليس غاية، بل هو رحلة مستمرة من الالتزام بأعلى معايير الجودة العالمية والاحترافية.', en: 'Since our inception, we have been determined to be at the forefront of groups seeking advancement in various fields, drawing our ambition from Saudi Vision 2030. We believe that excellence is not a destination, but a continuous journey of commitment to the highest international quality standards and professionalism.' },
+  'ceo.p3': { ar: 'إن ما يميزنا في "قمة أبطال نجد" هو إيماننا العميق بأن أدق التفاصيل هي التي تصنع الفوارق الكبرى. لذا، سخرنا كافة طاقاتنا وخبراتنا المتراكمة لتقديم حلول مبتكرة وغير تقليدية تتجاوز توقعات عملائنا، مع الالتزام التام بالصدق، الأمانة، والسلامة المهنية.', en: 'What distinguishes us at Qimma Abtal Najd is our deep belief that the finest details make the biggest differences. Therefore, we have dedicated all our energies and accumulated expertise to provide innovative and unconventional solutions that exceed our clients\' expectations, with full commitment to honesty, integrity, and occupational safety.' },
+  'ceo.p4': { ar: 'لقد حققنا بفضل الله أكثر من 200 مشروع منجز، نلنا من خلالها ثقة ما يزيد عن 500 عميل راضٍ. وهذا النجاح لم يكن ليتحقق لولا فريق عملنا المؤهل والبيئة الإبداعية التي تحفزنا على التطوير الدائم ومواكبة أحدث التقنيات.', en: 'By the grace of God, we have completed more than 200 projects, earning the trust of over 500 satisfied clients. This success would not have been possible without our qualified team and the creative environment that motivates us to continuously develop and keep up with the latest technologies.' },
+  'ceo.p5': { ar: 'نعدكم بأن نظل الشريك الموثوق الذي يسعى دائماً لتحقيق رضاكم التام، وتزويدكم بتجربة استثنائية وقيمة مضافة تعزز من تميزكم.', en: 'We promise to remain the trusted partner who always strives to achieve your complete satisfaction, providing you with an exceptional experience and added value that enhances your distinction.' },
+  'ceo.closing': { ar: 'معاً.. نواصل البناء، ونرتقي بالقمة.', en: 'Together.. we continue building, and rise to the summit.' },
+
   // Footer
   'footer.brand': { ar: 'قمة أبطال نجد للمقاولات', en: 'Qimma Abtal Najd Contracting' },
   'footer.brandEn': { ar: 'QIMMA ABTAL NAJD CONTRACTING COMPANY', en: 'QIMMA ABTAL NAJD CONTRACTING COMPANY' },

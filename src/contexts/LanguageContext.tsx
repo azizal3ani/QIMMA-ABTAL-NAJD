@@ -155,7 +155,11 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
   return (
     <LanguageContext.Provider value={{ lang, toggleLang, t }}>
-      <div dir={lang === 'ar' ? 'rtl' : 'ltr'} className={lang === 'en' ? 'font-sans' : ''}>
+      <div 
+        dir={lang === 'ar' ? 'rtl' : 'ltr'} 
+        className={`lang-transition ${lang === 'en' ? 'font-sans' : ''}`}
+        key={lang}
+      >
         {children}
       </div>
     </LanguageContext.Provider>

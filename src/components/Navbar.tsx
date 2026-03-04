@@ -3,6 +3,7 @@ import { Phone, Menu, X, Sun, Moon, Globe } from 'lucide-react'
 import { useState, useEffect } from 'react'
 import { useTheme } from '@/contexts/ThemeContext'
 import { useLanguage } from '@/contexts/LanguageContext'
+import logo from '@/assets/logo.png'
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -38,11 +39,13 @@ export default function Navbar() {
       transition={{ duration: 0.6 }}
       className="fixed top-0 left-0 right-0 w-full z-50"
     >
-      <div className={`w-full px-4 md:px-8 py-3 transition-all duration-300 ${
+      <div className={`w-full px-4 md:px-8 py-2 transition-all duration-300 ${
         isScrolled ? 'bg-background/90 backdrop-blur-xl border-b border-border' : 'bg-transparent'
       }`}>
         <div className="flex items-center justify-between max-w-7xl mx-auto">
-          <a href="#" className="text-primary font-extrabold text-xl">{t('nav.brand')}</a>
+          <a href="#" className="flex items-center gap-2">
+            <img src={logo} alt={t('nav.brand')} className="h-12 w-auto" />
+          </a>
           
           <div className="hidden lg:flex items-center gap-6">
             {links.map(l => (

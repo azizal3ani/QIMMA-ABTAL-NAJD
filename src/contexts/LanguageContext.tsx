@@ -137,7 +137,7 @@ const translations: Record<string, Record<Lang, string>> = {
   // CEO
   'ceo.label': { ar: 'كلمة المدير العام', en: 'CEO Message' },
   'ceo.title': { ar: 'كلمة المدير العام', en: 'A Word from the CEO' },
-  'ceo.name': { ar: 'عبدالعزيز الدهامس', en: 'Abdulaziz Al-Dahams' },
+  'ceo.name': { ar: 'عبدالعزيز الدهام', en: 'Abdulaziz Al-Daham' },
   'ceo.role': { ar: 'المدير العام', en: 'General Manager' },
   'ceo.bismillah': { ar: 'بسم الله الرحمن الرحيم', en: 'In the Name of God, the Most Gracious, the Most Merciful' },
   'ceo.p1': { ar: 'نخطو في شركة قمة أبطال نجد للمقاولات بخطى ثابتة نحو صياغة مستقبل جديد لقطاع المقاولات والأعمال الهندسية في مملكتنا الغالية. إننا لا نعتبر أنفسنا مجرد شركة تنفيذ، بل نحن شركاء في التنمية، نضع نصب أعيننا دائماً شعارنا "نبني قصص النجاح".', en: 'At Qimma Abtal Najd Contracting, we are taking steady steps towards shaping a new future for the contracting and engineering sector in our beloved Kingdom. We do not consider ourselves merely an execution company; we are partners in development, always keeping our motto "Building Success Stories" in sight.' },

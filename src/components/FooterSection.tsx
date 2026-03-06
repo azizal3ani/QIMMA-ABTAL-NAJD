@@ -1,5 +1,5 @@
 import { useLanguage } from '@/contexts/LanguageContext'
-import footerLogo from '@/assets/footer-logo.png'
+import footerLogo from '@/assets/logo.png'
 import { Phone, MapPin } from 'lucide-react'
 
 export default function FooterSection() {
@@ -10,7 +10,7 @@ export default function FooterSection() {
         {/* Logo & Company Info */}
         <div className="flex flex-col items-center md:items-start text-center md:text-start">
           <img src={footerLogo} alt={t('footer.brand')} className="h-20 w-auto mb-3" />
-          <p className="text-primary font-black text-lg mb-1">{t('footer.brand')}</p>
+          <p className="font-black text-lg mb-1" style={{ color: '#011ea0' }}>{t('footer.brand')}</p>
           <p className="text-muted-foreground text-sm leading-relaxed max-w-xs">
             {lang === 'ar'
               ? 'شركة سعودية رائدة في مجالات المقاولات والأعمال الهندسية والخدمات العامة'

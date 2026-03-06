@@ -45,9 +45,8 @@ export default function Navbar() {
         isScrolled ? 'bg-background/90 backdrop-blur-xl border-b border-border' : 'bg-transparent'
       }`}>
         <div className="flex items-center justify-between max-w-7xl mx-auto">
-          <a href="#" className="flex items-center gap-2">
+          <a href="#" className="flex items-center">
             <img src={logo} alt={t('nav.brand')} className="h-12 w-auto" />
-            <span className="font-extrabold text-sm md:text-base leading-tight hidden sm:block" style={{ color: '#011ea0' }}>{t('nav.brand')}</span>
           </a>
           
           <div className="hidden lg:flex items-center gap-6">

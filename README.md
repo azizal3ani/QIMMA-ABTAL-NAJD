@@ -1,8 +1,11 @@
-# Welcome to your abtal najd
+# Welcome to your qimma abtal najd
+General contracting company
+
 
 ## Project info
 
-**URL**: https://abtalnajd.com/
+**website**: https://abtalnajd.com/
+
 
 This project is built with:
 
@@ -11,11 +14,3 @@ This project is built with:
 - React
 - shadcn-ui
 - Tailwind CSS
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)

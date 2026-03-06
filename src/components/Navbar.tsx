@@ -1,13 +1,15 @@
 import { motion } from 'framer-motion'
-import { Phone, Menu, X, Sun, Moon, Globe } from 'lucide-react'
+import { FileText, Menu, X, Sun, Moon, Globe } from 'lucide-react'
 import { useState, useEffect } from 'react'
 import { useTheme } from '@/contexts/ThemeContext'
 import { useLanguage } from '@/contexts/LanguageContext'
 import logo from '@/assets/logo.png'
+import QuoteRequestForm from './QuoteRequestForm'
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isQuoteOpen, setIsQuoteOpen] = useState(false)
   const { theme, toggleTheme } = useTheme()
   const { lang, toggleLang, t } = useLanguage()
 
@@ -76,10 +78,10 @@ export default function Navbar() {
               {lang === 'ar' ? 'EN' : 'ع'}
             </button>
 
-            <a href="tel:+966548511531" className="hidden sm:flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2 rounded-lg font-bold text-sm hover:opacity-90 transition-opacity">
-              <Phone className="w-4 h-4" />
+            <button onClick={() => setIsQuoteOpen(true)} className="hidden sm:flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2 rounded-lg font-bold text-sm hover:opacity-90 transition-opacity">
+              <FileText className="w-4 h-4" />
               {t('nav.callUs')}
-            </a>
+            </button>
             <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="lg:hidden text-foreground p-2">
               {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -101,13 +103,14 @@ export default function Navbar() {
                 {l.label}
               </a>
             ))}
-            <a href="tel:+966548511531" className="mt-4 flex items-center justify-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-bold">
-              <Phone className="w-5 h-5" />
+            <button onClick={() => { setIsQuoteOpen(true); setIsMobileMenuOpen(false) }} className="mt-4 flex items-center justify-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-bold">
+              <FileText className="w-5 h-5" />
               {t('nav.callUs')}
-            </a>
+            </button>
           </div>
         </motion.div>
       )}
+      <QuoteRequestForm isOpen={isQuoteOpen} onClose={() => setIsQuoteOpen(false)} />
     </motion.nav>
   )
 }

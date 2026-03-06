@@ -9,6 +9,7 @@ import QuoteRequestForm from './QuoteRequestForm'
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isQuoteOpen, setIsQuoteOpen] = useState(false)
   const { theme, toggleTheme } = useTheme()
   const { lang, toggleLang, t } = useLanguage()
 

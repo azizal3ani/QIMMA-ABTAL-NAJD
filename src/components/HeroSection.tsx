@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import heroImg from '@/assets/hero-construction.jpg'
+import heroImg from '@/assets/project-construction.jpg'
 import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function HeroSection() {

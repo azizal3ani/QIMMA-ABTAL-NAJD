@@ -18,7 +18,21 @@ const translations: Record<string, Record<Lang, string>> = {
   'nav.projects': { ar: 'مشاريعنا', en: 'Projects' },
   'nav.whyUs': { ar: 'لماذا نحن', en: 'Why Us' },
   'nav.contact': { ar: 'تواصل معنا', en: 'Contact Us' },
-  'nav.callUs': { ar: 'اتصل بنا', en: 'Call Us' },
+  'nav.callUs': { ar: 'طلب عرض سعر', en: 'Request Quote' },
+
+  // Quote Form
+  'quote.title': { ar: 'طلب عرض سعر', en: 'Request a Quote' },
+  'quote.subtitle': { ar: 'املأ النموذج وسنتواصل معك في أقرب وقت', en: 'Fill the form and we\'ll get back to you soon' },
+  'quote.name': { ar: 'الاسم الكامل', en: 'Full Name' },
+  'quote.phone': { ar: 'رقم الجوال', en: 'Phone Number' },
+  'quote.email': { ar: 'البريد الإلكتروني', en: 'Email' },
+  'quote.company': { ar: 'اسم الشركة (اختياري)', en: 'Company Name (optional)' },
+  'quote.selectService': { ar: 'اختر الخدمة المطلوبة', en: 'Select Required Service' },
+  'quote.details': { ar: 'تفاصيل إضافية عن المشروع...', en: 'Additional project details...' },
+  'quote.submit': { ar: 'إرسال الطلب', en: 'Submit Request' },
+  'quote.success': { ar: 'تم إرسال طلبك بنجاح!', en: 'Request Sent Successfully!' },
+  'quote.successDesc': { ar: 'سنتواصل معك في أقرب وقت ممكن', en: 'We\'ll get back to you as soon as possible' },
+  'quote.emailSubject': { ar: 'طلب عرض سعر - موقع أبطال نجد', en: 'Quote Request - Abtal Najd Website' },
 
   // Hero
   'hero.brand': { ar: 'قمة أبطال نجد', en: 'Qimma Abtal Najd' },

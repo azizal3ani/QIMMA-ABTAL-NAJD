@@ -1,9 +1,10 @@
 import { motion } from 'framer-motion'
-import { Phone, Menu, X, Sun, Moon, Globe } from 'lucide-react'
+import { FileText, Menu, X, Sun, Moon, Globe } from 'lucide-react'
 import { useState, useEffect } from 'react'
 import { useTheme } from '@/contexts/ThemeContext'
 import { useLanguage } from '@/contexts/LanguageContext'
 import logo from '@/assets/logo.png'
+import QuoteRequestForm from './QuoteRequestForm'
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)

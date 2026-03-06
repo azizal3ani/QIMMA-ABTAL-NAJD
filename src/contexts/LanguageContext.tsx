@@ -99,7 +99,7 @@ const translations: Record<string, Record<Lang, string>> = {
   'services.s12': { ar: 'بناء', en: 'Construction' },
   'services.s13': { ar: 'هدم', en: 'Demolition' },
   'services.s14': { ar: 'بناء مستودعات', en: 'Warehouse Building' },
-  'services.s15': { ar: 'مرفق مجي', en: 'Facilities' },
+  'services.s15': { ar: 'صرف صحي', en: 'Sewage' },
   'services.s16': { ar: 'انترلوك', en: 'Interlock' },
 
   // Projects

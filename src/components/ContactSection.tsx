@@ -7,7 +7,8 @@ export default function ContactSection() {
   const contacts = [
     { icon: Phone, label: '+966 54 851 1531', href: 'tel:+966548511531' },
     { icon: Phone, label: '+966 53 118 8553', href: 'tel:+966531188553' },
-    { icon: Mail, label: 'Abtal.najd@gmail.com', href: 'mailto:Abtal.najd@gmail.com' },
+    { icon: Mail, label: 'abtal.najd@gmail.com', href: 'mailto:abtal.najd@gmail.com' },
+    { icon: Mail, label: 'hello@abtalnajd.com', href: 'mailto:hello@abtalnajd.com' },
     { icon: MapPin, label: t('contact.location'), href: '#' },
   ]
 

@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { useTheme } from '@/contexts/ThemeContext'
 import { useLanguage } from '@/contexts/LanguageContext'
 import logo from '@/assets/logo.png'
+import logoEn from '@/assets/logo-en.png'
 import QuoteRequestForm from './QuoteRequestForm'
 
 export default function Navbar() {
@@ -46,7 +47,7 @@ export default function Navbar() {
       }`}>
         <div className="flex items-center justify-between max-w-7xl mx-auto">
           <a href="#" className="flex items-center">
-            <img src={logo} alt={t('nav.brand')} className="h-12 w-auto" />
+            <img src={lang === 'en' ? logoEn : logo} alt={t('nav.brand')} className="h-12 w-auto" />
           </a>
           
           <div className="hidden lg:flex items-center gap-6">

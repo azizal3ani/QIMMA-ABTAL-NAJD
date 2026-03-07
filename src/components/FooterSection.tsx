@@ -1,5 +1,6 @@
 import { useLanguage } from '@/contexts/LanguageContext'
 import footerLogo from '@/assets/logo.png'
+import footerLogoEn from '@/assets/logo-en.png'
 import { MapPin } from 'lucide-react'
 
 export default function FooterSection() {
@@ -18,7 +19,7 @@ export default function FooterSection() {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
         {/* Logo & Company Info */}
         <div className="flex flex-col items-center md:items-start text-center md:text-start">
-          <img src={footerLogo} alt={t('footer.brand')} className="h-20 w-auto mb-3" />
+          <img src={lang === 'en' ? footerLogoEn : footerLogo} alt={t('footer.brand')} className="h-20 w-auto mb-3" />
           <p className="font-black text-lg mb-1" style={{ color: '#011ea0' }}>{t('footer.brand')}</p>
           <p className="text-muted-foreground text-sm leading-relaxed max-w-xs">
             {lang === 'ar'

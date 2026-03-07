@@ -6,7 +6,7 @@ export default function ContactSection() {
   const { t } = useLanguage()
   const contacts = [
     { icon: Phone, label: '+966 54 851 1531', href: 'tel:+966548511531' },
-    { icon: Phone, label: '+966 53 118 8553', href: 'tel:+966531188553' },
+    { icon: Phone, label: '+966 53 118 8553', href: 'https://wa.me/966531188553', isWhatsApp: true },
     { icon: Mail, label: 'abtal.najd@gmail.com', href: 'mailto:abtal.najd@gmail.com' },
     { icon: Mail, label: 'hello@abtalnajd.com', href: 'mailto:hello@abtalnajd.com' },
     { icon: MapPin, label: t('contact.location'), href: '#' },
@@ -39,6 +39,7 @@ export default function ContactSection() {
             >
               <c.icon className="w-8 h-8 text-primary mx-auto mb-3" />
               <span className="text-foreground font-semibold text-sm block" dir="ltr">{c.label}</span>
+              {(c as any).isWhatsApp && <span className="text-xs text-green-600 font-bold mt-1 block">WhatsApp</span>}
             </motion.a>
           ))}
         </div>

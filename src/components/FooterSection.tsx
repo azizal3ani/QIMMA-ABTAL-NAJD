@@ -1,9 +1,18 @@
 import { useLanguage } from '@/contexts/LanguageContext'
 import footerLogo from '@/assets/logo.png'
-import { Phone, MapPin } from 'lucide-react'
+import { MapPin } from 'lucide-react'
 
 export default function FooterSection() {
   const { t, lang } = useLanguage()
+
+  const links = [
+    { href: '#', label: lang === 'ar' ? 'الصفحة الرئيسية' : 'Home' },
+    { href: '#about', label: lang === 'ar' ? 'من نحن' : 'About Us' },
+    { href: '#services', label: lang === 'ar' ? 'خدماتنا' : 'Services' },
+    { href: '#projects', label: lang === 'ar' ? 'مشاريعنا' : 'Projects' },
+    { href: '#contact', label: lang === 'ar' ? 'تواصل معنا' : 'Contact Us' },
+  ]
+
   return (
     <footer className="bg-background border-t border-border py-12 px-4">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
@@ -29,26 +38,28 @@ export default function FooterSection() {
           </p>
         </div>
 
-        {/* WhatsApp Contact */}
+        {/* Quick Links */}
         <div className="flex flex-col items-center md:items-end text-center md:text-end">
-          <a
-            href="https://wa.me/966531188553"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 bg-green-600 text-white px-5 py-3 rounded-xl font-bold text-sm hover:bg-green-700 transition-colors"
-          >
-            <Phone className="w-4 h-4" />
-            <span dir="ltr">+966 53 118 8553</span>
-          </a>
-          <p className="text-muted-foreground text-xs mt-2">
-            {lang === 'ar' ? 'تواصل معنا عبر واتساب' : 'Contact us on WhatsApp'}
-          </p>
+          <h4 className="text-foreground font-bold mb-3">
+            {lang === 'ar' ? 'روابط سريعة' : 'Quick Links'}
+          </h4>
+          <nav className="flex flex-col gap-2">
+            {links.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="text-muted-foreground text-sm hover:text-primary transition-colors"
+              >
+                {link.label}
+              </a>
+            ))}
+          </nav>
         </div>
       </div>
 
       <div className="max-w-7xl mx-auto mt-8 pt-6 border-t border-border text-center">
         <p className="text-muted-foreground text-xs">
-          © {new Date().getFullYear()} {t('footer.rights')}
+          © {new Date().getFullYear()} {lang === 'ar' ? 'جميع الحقوق محفوظة - قمة ابطال نجد للمقاولات' : 'All Rights Reserved - Qimma Abtal Najd Contracting'}
         </p>
       </div>
     </footer>

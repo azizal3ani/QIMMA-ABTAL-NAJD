@@ -105,7 +105,7 @@ const translations: Record<string, Record<Lang, string>> = {
   // Projects
   'projects.label': { ar: 'أعمالنا', en: 'Our Work' },
   'projects.title': { ar: 'من مشاريعنا', en: 'Our Projects' },
-  'projects.desc': { ar: 'أعمال الأسفلت وتوصيل المواسير في المنطقة الشرقية (الأحساء - الخبر - الدمام - الجبيل). نقدم خدمات متكاملة وفق أعلى معايير الجودة والسلامة.', en: 'Asphalt and pipe installation works in the Eastern Region (Al-Ahsa - Al-Khobar - Dammam - Jubail). We provide integrated services according to the highest quality and safety standards.' },
+  'projects.desc': { ar: 'أعمال الأسفلت وتوصيل المواسير في المملكة العربية السعودية (الأحساء - الخبر - الدمام - الجبيل). نقدم خدمات متكاملة وفق أعلى معايير الجودة والسلامة.', en: 'Asphalt and pipe installation works in the Kingdom of Saudi Arabia (Al-Ahsa - Al-Khobar - Dammam - Jubail). We provide integrated services according to the highest quality and safety standards.' },
   'projects.p1': { ar: 'تنفيذ أعمال البناء', en: 'Construction Works' },
   'projects.p1d': { ar: 'سكنية، تجارية، صناعية بأعلى معايير الجودة', en: 'Residential, commercial, industrial with highest quality standards' },
   'projects.p2': { ar: 'تصميم وتنفيذ المستودعات', en: 'Warehouse Design & Build' },

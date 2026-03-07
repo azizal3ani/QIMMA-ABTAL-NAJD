@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import heroImg from '@/assets/project-construction.jpg'
+import vision2030 from '@/assets/vision2030.png'
 import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function HeroSection() {
@@ -37,10 +38,9 @@ export default function HeroSection() {
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 0.8 }}
-        className="absolute top-24 left-4 md:left-8 bg-primary text-primary-foreground px-5 py-3 rounded-xl text-center"
+        className="absolute top-24 left-4 md:left-8"
       >
-        <span className="text-2xl font-black block">{t('hero.vision2030')}</span>
-        <span className="text-sm font-semibold">{t('hero.vision2030sub')}</span>
+        <img src={vision2030} alt="Vision 2030" className="h-20 md:h-28 w-auto" />
       </motion.div>
     </section>
   )

@@ -40,7 +40,7 @@ export default function HeroSection() {
         transition={{ delay: 0.8 }}
         className="absolute top-24 left-4 md:left-8"
       >
-        <img src={vision2030} alt="Vision 2030" className="h-20 md:h-28 w-auto" />
+        <img src={vision2030} alt="Vision 2030" className="h-28 md:h-40 w-auto" />
       </motion.div>
     </section>
   )

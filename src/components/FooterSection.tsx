@@ -59,9 +59,18 @@ export default function FooterSection() {
       </div>
 
       <div className="max-w-7xl mx-auto mt-8 pt-6 border-t border-border text-center">
-        <p className="text-muted-foreground text-xs">
+        <p className="text-muted-foreground text-xs mb-2">
           © {new Date().getFullYear()} {lang === 'ar' ? 'جميع الحقوق محفوظة - قمة ابطال نجد للمقاولات' : 'All Rights Reserved - Qimma Abtal Najd Contracting'}
         </p>
+        <div className="flex items-center justify-center gap-3 text-xs">
+          <a href="/docs/terms-and-conditions.pdf" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+            {lang === 'ar' ? 'الشروط والأحكام' : 'Terms & Conditions'}
+          </a>
+          <span className="text-muted-foreground">|</span>
+          <a href="/docs/privacy-policy.pdf" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+            {lang === 'ar' ? 'سياسة الخصوصية' : 'Privacy Policy'}
+          </a>
+        </div>
       </div>
     </footer>
   )

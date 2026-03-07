@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Phone, Mail, MapPin } from 'lucide-react'
+import { Phone, Mail } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function ContactSection() {
@@ -9,7 +9,7 @@ export default function ContactSection() {
     { icon: Phone, label: '+966 53 118 8553', href: 'https://wa.me/966531188553', isWhatsApp: true },
     { icon: Mail, label: 'abtal.najd@gmail.com', href: 'mailto:abtal.najd@gmail.com' },
     { icon: Mail, label: 'hello@abtalnajd.com', href: 'mailto:hello@abtalnajd.com' },
-    { icon: MapPin, label: t('contact.location'), href: '#' },
+    
   ]
 
   return (
